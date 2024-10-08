@@ -21,7 +21,7 @@ def task_create(request):
     return render(request, 'todo/task_form.html', {'form': form})
 
 
-def task_update(request, pk):
+def update_task(request, pk):
     task = Task.objects.get(pk=pk)  
     if request.method == 'POST':
         form = TaskForm(request.POST, instance=task)

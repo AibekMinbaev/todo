@@ -1,0 +1,18 @@
+<!-- todo/templates/todo/task_form.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить задачу</title>
+</head>
+<body>
+    <h1>Добавить новую задачу</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Сохранить</button>
+    </form>
+    <a href="{% url 'task_list' %}">Назад к списку задач</a>
+</body>
+</html>

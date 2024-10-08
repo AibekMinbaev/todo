@@ -33,7 +33,7 @@ def task_update(request, pk):
     return render(request, 'todo/task_form.html', {'form': form})
 
 
-def task_delete(request, pk):
+def delete_task(request, pk):
     task = get_object_or_404(Task, pk=pk)
     if request.method == 'POST':
         task.delete()
